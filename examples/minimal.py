@@ -1,4 +1,4 @@
-"""minimal.py — the smallest feng3d piece: a grid of randomly sized and rotated boxes dropped
+"""minimal.py — the smallest ceaulver piece: a grid of randomly sized and rotated boxes dropped
 onto the ground, drawn in wireframe. Start here to build your own.
 
     uv run examples/minimal.py
@@ -16,8 +16,8 @@ import sys
 import numpy as np
 import moderngl_window as mglw
 
-from feng3d import config
-from feng3d.solver import Solver
+from ceaulver import config
+from ceaulver.solver import Solver
 import scene_config
 from render import Renderer
 
@@ -45,7 +45,7 @@ def make_world():
 
 
 class MinimalWindow(mglw.WindowConfig):
-    title = "feng3d — minimal"
+    title = "ceaulver — minimal"
     gl_version = (3, 3)
     window_size = (scene_config.WINDOW_W, scene_config.WINDOW_H)
     aspect_ratio = None

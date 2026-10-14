@@ -6,8 +6,8 @@ k_motion: per-block velocity + omega, for render.py's motion blur.
 import numpy as np
 import taichi as ti
 
-from feng3d import fields
-from feng3d.fields import vel_f, omega_f
+from ceaulver import fields
+from ceaulver.fields import vel_f, omega_f
 
 LIGHT_LEFT  = (1.0, 1.0, 1.0)      # white, from screen-left
 LIGHT_RIGHT = (1.0, 1.0, 1.0)      # white, from screen-right

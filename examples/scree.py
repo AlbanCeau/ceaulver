@@ -6,7 +6,7 @@ import numpy as np
 import moderngl_window as mglw
 import taichi as ti
 
-from feng3d import config
+from ceaulver import config
 import scene_config
 from render import Renderer
 
@@ -30,8 +30,8 @@ if USE_GUI:
 # "physics" (its ti.sync() waits for the whole GPU queue, GL included).
 PROF_GPU = os.environ.get("PROF_GPU", "0") == "1"
 
-from feng3d import params, fields
-from feng3d.solver import Solver, _rodrigues
+from ceaulver import params, fields
+from ceaulver.solver import Solver, _rodrigues
 # island-sleeping recheck mode: 1 (DEFAULT) -> staggered (immune to the one-ring
 # active-blanket). ISLAND_STAG=0 -> original one-ring.
 fields.island_stag[None] = int(os.environ.get("ISLAND_STAG", "1"))

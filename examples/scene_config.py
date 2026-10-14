@@ -1,6 +1,6 @@
 """Scene settings shared by the examples: window, camera, colours, slope geometry, spawner.
 
-Solver constants (gravity, contact, friction, sleep) live in feng3d/config.py.
+Solver constants (gravity, contact, friction, sleep) live in ceaulver/config.py.
 """
 
 WINDOW_W = 1280

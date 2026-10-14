@@ -37,18 +37,18 @@ if _os.environ.get("TI_FULL_ERRORS") != "1":
 # to ~3 s; no runtime cost was measured on a 1.4K-block pile, larger scenes untested.
 #
 # Taichi is initialised here unless the caller already did: to choose the backend or
-# other settings, call ti.init(..., default_fp=ti.f32) BEFORE importing any feng3d
+# other settings, call ti.init(..., default_fp=ti.f32) BEFORE importing any ceaulver
 # module other than config. The solver assumes f32.
 from taichi.lang import impl as _ti_impl
 if _ti_impl.get_runtime().prog is None:
     import contextlib as _ctx, io as _io
-    # ti.init prints "[Taichi] Starting on arch=..." unconditionally; FENG3D_VERBOSE=1 shows it
-    _quiet = _os.environ.get("FENG3D_VERBOSE", "0") != "1"
+    # ti.init prints "[Taichi] Starting on arch=..." unconditionally; CEAULVER_VERBOSE=1 shows it
+    _quiet = _os.environ.get("CEAULVER_VERBOSE", "0") != "1"
     with _ctx.redirect_stdout(_io.StringIO()) if _quiet else _ctx.nullcontext():
         ti.init(arch=ti.gpu, default_fp=ti.f32, log_level=ti.WARN,
                 offline_cache=(_os.environ.get("TI_NO_CACHE") != "1"))
     if _os.environ.get("TI_NO_CACHE") == "1":
-        print("[feng3d] TI_NO_CACHE=1 -> offline_cache disabled (kernels compiled fresh)")
+        print("[ceaulver] TI_NO_CACHE=1 -> offline_cache disabled (kernels compiled fresh)")
 
 # ==================================================================
 # Constants

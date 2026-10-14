@@ -232,7 +232,7 @@ class Solver:
         idx = self._n
         if idx >= MAX_N: return
         if not self._spawn_he_warned and max(half_extents) > self._grid_max_he + 1e-6:
-            print(f"[feng3d] WARNING: block he={max(half_extents):.2f} exceeds the world's "
+            print(f"[ceaulver] WARNING: block he={max(half_extents):.2f} exceeds the world's "
                   f"max_he={self._grid_max_he:.2f}; the broadphase cell is sized for max_he and "
                   f"will MISS contacts for this block. Construct Solver(max_he=...) larger.")
             self._spawn_he_warned = True

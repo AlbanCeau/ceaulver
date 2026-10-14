@@ -102,11 +102,11 @@ _T_LAUNCH = _time.time()       # --capture: the CSV's t_wall is measured from he
 
 import numpy as np
 
-from feng3d import config
+from ceaulver import config
 import scene_config
-from feng3d import params, fields, solver
-from feng3d.fields import n_f, sleep_f, pos_f, vel_f, R_f, cntct_f, nosleep_f, nowake_f, MAX_N
-from feng3d.solver import Solver
+from ceaulver import params, fields, solver
+from ceaulver.fields import n_f, sleep_f, pos_f, vel_f, R_f, cntct_f, nosleep_f, nowake_f, MAX_N
+from ceaulver.solver import Solver
 
 ROWS    = int(os.environ.get("WALL_ROWS", "30"))
 WIDTH   = int(os.environ.get("WALL_WIDTH", "60"))

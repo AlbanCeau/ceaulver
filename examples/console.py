@@ -6,7 +6,7 @@ every STATUS_EVERY seconds: physics time per frame, frames per second, and the n
 of blocks awake and asleep. Above it, the controls, with an [on] / [off] telltale next to
 the toggles that have one.
 
-FENG3D_VERBOSE=1 brings the full output back instead (scene setup, the
+CEAULVER_VERBOSE=1 brings the full output back instead (scene setup, the
 120-frame profile blocks, key feedback, Taichi's and moderngl-window's own lines).
 The headless modes (--check, --diag) always print their stats.
 """
@@ -18,7 +18,7 @@ import sys
 import time
 import warnings
 
-VERBOSE = os.environ.get("FENG3D_VERBOSE", "0") == "1"
+VERBOSE = os.environ.get("CEAULVER_VERBOSE", "0") == "1"
 STATUS_EVERY = 2.0      # seconds between redraws of the status line
 
 if not VERBOSE:
@@ -29,14 +29,14 @@ if not VERBOSE:
 
 
 def info(*args, **kwargs):
-    """print(), only under FENG3D_VERBOSE=1."""
+    """print(), only under CEAULVER_VERBOSE=1."""
     if VERBOSE:
         print(*args, **kwargs)
 
 
 def _block_counts():
     """(awake, asleep) blocks: one GPU readback, done only when the line is redrawn."""
-    from feng3d import fields
+    from ceaulver import fields
     n = int(fields.n_f[None])
     awake = int((fields.sleep_f.to_numpy()[:n] == 0).sum()) if n else 0
     return awake, n - awake

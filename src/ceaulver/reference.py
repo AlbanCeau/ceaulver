@@ -12,7 +12,7 @@ by construction, with the normal n = a_c/|a_c| continuous across feature changes
 
 Pure numpy, correctness over speed (220-triple vertex enumeration).
 
-Run:  uv run python -m feng3d.reference
+Run:  uv run python -m ceaulver.reference
 """
 
 import numpy as np

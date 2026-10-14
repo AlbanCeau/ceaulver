@@ -29,8 +29,8 @@ from pathlib import Path
 import numpy as np
 from imgui_bundle import imgui
 
-from feng3d import params, fields
-from feng3d import config
+from ceaulver import params, fields
+from ceaulver import config
 import scene_config
 
 

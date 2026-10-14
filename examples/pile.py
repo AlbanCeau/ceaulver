@@ -49,12 +49,12 @@ _T_LAUNCH = _time.time()       # --capture: the CSV's t_wall is measured from he
 import numpy as np
 import taichi as ti
 
-from feng3d import config
+from ceaulver import config
 import scene_config
-from feng3d import params, fields, broadphase
-from feng3d.fields import n_f, sleep_f, pos_f, vel_f, R_f, he_f, gnd_f, cntct_f, nosleep_f, grid_cnt, grid_data, grid_cell_f, MAX_PER_CELL
-from feng3d.broadphase import _grid_hash
-from feng3d.solver import Solver, _rodrigues
+from ceaulver import params, fields, broadphase
+from ceaulver.fields import n_f, sleep_f, pos_f, vel_f, R_f, he_f, gnd_f, cntct_f, nosleep_f, grid_cnt, grid_data, grid_cell_f, MAX_PER_CELL
+from ceaulver.broadphase import _grid_hash
+from ceaulver.solver import Solver, _rodrigues
 
 SPAWN_RATE = float(os.environ.get("PILE_RATE", "7"))      # blocks / sim-second
 SPAWN_Y    = float(os.environ.get("PILE_SPAWN_Y", "100")) # new block's bottom, above ground

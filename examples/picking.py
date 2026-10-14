@@ -1,4 +1,4 @@
-"""picking.py — click a block, delete it (any feng3d scene).
+"""picking.py — click a block, delete it (any ceaulver scene).
 
 pick(o, d): the nearest block hit by the ray o + t d (slab test in each block's own
 frame; optional periodic copies along z). drop(i): send block i far below the world --
@@ -9,8 +9,8 @@ ray_from_click: the ray through a window point, from the renderer's view-project
 import numpy as np
 import taichi as ti
 
-from feng3d import fields
-from feng3d.fields import pos_f, R_f, n_f
+from ceaulver import fields
+from ceaulver.fields import pos_f, R_f, n_f
 
 _BIG = 1 << 30
 pick_t = ti.field(ti.i32, ())
