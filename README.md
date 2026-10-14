@@ -1,4 +1,4 @@
-## feng3d, a minimal collision solver for the GPU
+## ceaulver, a minimal collision solver for the GPU
 
 This is a collision solver I developed for my own visual work, running on GPU. It's based on penalty methods and an energy conservative contact model, runs on Apple Silicon and also targets NVIDIA GPUs (untested), built using Taichi.
 
@@ -15,8 +15,8 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 To run the examples: 
 
 ```
-git clone https://github.com/AlbanCeau/feng3d
-cd feng3d
+git clone https://github.com/AlbanCeau/ceaulver
+cd ceaulver
 uv run examples/wall.py
 ```
 
